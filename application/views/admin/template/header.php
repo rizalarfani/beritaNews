@@ -42,16 +42,16 @@
                     <ul class="nav navbar-nav" style="margin-right: 20px;">
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!-- <img alt="User Profile <?php echo $this->session->userdata('log_backend')['nama_lengkap'] ?>" src="<?php echo base_url() ?>uploads/image/<?php echo $this->session->userdata('log_backend')['foto'] ?>" class="user-image">
-                                <span class="hidden-xs"><?php echo $this->session->userdata('log_backend')['nama_lengkap'] ?></span> -->
+                                <img alt="User Profile <?php echo $this->session->userdata('log_admin')->nama_lengkap ?>" src="<?php echo base_url() ?>upload/profil/<?php echo $this->session->userdata('log_admin')->foto ?>" class="user-image">
+                                <span class="hidden-xs"><?php echo $this->session->userdata('log_admin')->nama_lengkap ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <!-- <img alt="User Profile <?php echo $this->session->userdata('log_backend')['nama_lengkap'] ?>" class="img-circle" src="<?php echo base_url() ?>uploads/image/<?php echo $this->session->userdata('log_backend')['foto'] ?>">
+                                    <img alt="User Profile <?php echo $this->session->userdata('log_admin')->nama_lengkap ?>" class="img-circle" src="<?php echo base_url() ?>upload/profil/<?php echo $this->session->userdata('log_admin')->foto ?>">
                                     <p>
-                                        <?php echo $this->session->userdata('log_backend')['email'] ?>
-                                        <small>Member since Nov. 2012</small> -->
+                                        <?php echo $this->session->userdata('log_admin')->email ?>
+                                        <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
                                 <li class="user-footer">
@@ -59,7 +59,7 @@
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="<?php echo base_url('belakang/logout') ?>" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="<?php echo base_url('logout') ?>" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>

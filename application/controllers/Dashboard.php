@@ -6,6 +6,10 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Model_dashboard', 'dashboard');
+        $this->log_admin = $this->session->userdata('log_admin');
+        if (empty($this->log_admin)) {
+            redirect('login');
+        }
     }
     public function index()
     {

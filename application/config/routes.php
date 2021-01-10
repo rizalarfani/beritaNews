@@ -53,6 +53,9 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['login'] = "auth/index";
+$route['login/prosess_login'] = 'auth/prosesLogin';
+$route['logout'] = 'auth/logout';
 
 $route['user'] = 'user/index';
 $route['user/delete/(:num)'] = "user/delete/(:num)";
