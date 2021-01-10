@@ -16,12 +16,6 @@
 <script src="<?php echo base_url() ?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
 <script src="<?php echo base_url() ?>assets/plugins/toastr/js/toastr.min.js"></script>
 <script src="<?php echo base_url('assets/plugins/dataTablesPrint/dataTables.buttons.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/buttons.flash.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/jszip.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/pdfmake.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/vfs_fonts.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/buttons.html5.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/dataTablesPrint/buttons.print.min.js') ?>"></script>
 <script>
     $(document).ready(function() {
         let infoBerhasil = $('#infoBerhasil').data('info');

@@ -12,7 +12,7 @@
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li id="dahsboard">
-                <a href="<?php echo base_url('dashboard_admin') ?>">
+                <a href="<?php echo base_url('dashboard') ?>">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>

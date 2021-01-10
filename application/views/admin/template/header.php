@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/toastr/css/toastr.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/sweetalert2/sweetalert2.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/dataTablesPrint/buttons.dataTables.min.css') ?>">
     <script src="<?php echo base_url('assets') ?>/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 </head>
 

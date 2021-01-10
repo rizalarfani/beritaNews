@@ -4,7 +4,11 @@
             <!-- small box -->
             <div class="small-box bg-yellow">
                 <div class="inner">
-                    <h3>0</h3>
+                    <?php if (empty($count_user)) : ?>
+                        <h3>0</h3>
+                    <?php else : ?>
+                        <h3><?php echo $count_user ?></h3>
+                    <?php endif; ?>
                     <p>Data User</p>
                 </div>
                 <div class="icon">
