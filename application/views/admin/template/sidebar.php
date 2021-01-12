@@ -16,6 +16,15 @@
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
+            <li class="treeview" id="data_master">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Data Master</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Berita</a></li>
+                    <li id="kategori"><a href="<?php echo base_url('kategori') ?>"><i class="fa fa-circle-o"></i> Kategori</a></li>
+                </ul>
+            </li>
             <li id="user">
                 <a href="<?php echo base_url('user') ?>">
                     <i class="fa fa-users"></i> <span>user</span>

@@ -50,11 +50,48 @@ class Auth extends CI_Controller
         $this->session->sess_destroy();
         redirect('login');
     }
+    public function profil()
+    {
+        $email = $this->session->userdata('log_admin')->email;
+        $get_profil = $this->login->profil(['email' => $email]);
+        $params = [
+            'title' => $get_profil->nama_lengkap,
+            'page' => 'admin/v_profil',
+            'judul' => 'profil',
+            'sub_judul' => $get_profil->nama_lengkap,
+            'profil' => $get_profil
+        ];
+        template($params);
+    }
+    public function ubah_profile()
+    {
+        $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
+        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+        if ($this->form_validation->run() == TRUE) {
+            $id = $this->session->userdata('log_admin')->id;
+            $data = [
+                'nama_lengkap' => htmlspecialchars($this->input->post('nama', true)),
+                'email' => htmlspecialchars($this->input->post('email', true))
+            ];
+            $where = ['id' => $id];
+            $update = $this->login->update($data, $where);
+            if ($update) {
+                $this->session->set_flashdata('info', 'Berhasil ubah profile');
+                redirect('profil');
+            } else {
+                $this->session->set_flashdata('infoGagal', 'Gagal ubah profile');
+                redirect('profil');
+            }
+        } else {
+            $this->session->set_flashdata('infoGagal', validation_errors());
+            redirect('profil');
+        }
+    }
+
     private function _DaftarSession($data)
     {
         array_merge('login', ['log_status' => true]);
         $this->session->set_userdata('log_admin', $data);
     }
 }
-
 /* End of file Auth.php */

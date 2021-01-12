@@ -56,6 +56,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = "auth/index";
 $route['login/prosess_login'] = 'auth/prosesLogin';
 $route['logout'] = 'auth/logout';
+$route['profil'] = 'auth/profil';
+$route['ubah_profil'] = 'auth/ubah_profile';
 
 $route['user'] = 'user/index';
 $route['user/delete/(:num)'] = "user/delete/(:num)";
+
+$route['kategori/delete/(:num)'] = 'kategori/delete/(:num)';

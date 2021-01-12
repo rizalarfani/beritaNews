@@ -9,5 +9,19 @@ class Model_login extends CI_Model
         $data = $this->db->get('tbl_user')->row();
         return count(((array)$data) > 0) ? $data : false;
     }
+    public function profil($where)
+    {
+        $this->db->select('id,nama_lengkap,email,foto');
+        $this->db->from('tbl_user');
+        $this->db->where($where);
+        $data = $this->db->get()->row();
+        return (count((array)$data) > 0) ? $data : false;
+    }
+    public function update($data, $where)
+    {
+        $this->db->where($where);
+        $update = $this->db->update('tbl_user', $data);
+        return ($update) ? true : false;
+    }
 }
 /* End of file Model_login.php */
