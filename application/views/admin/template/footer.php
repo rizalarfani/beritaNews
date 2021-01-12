@@ -1,11 +1,10 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.0
+        <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2020-2021 <a href="http://almsaeedstudio.com">SMK Bhakti Praja Talang</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2020-2021 <a href="https://adminlte.io/">Admin LTE</a>.</strong> All rights reserved.
 </footer>
-</div><!-- ./wrapper -->
-
+</div>
 <script src="<?php echo base_url('assets') ?>/bootstrap-3/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url('assets') ?>/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="<?php echo base_url('assets') ?>/plugins/datatables/jquery.dataTables.min.js"></script>

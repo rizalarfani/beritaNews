@@ -87,7 +87,6 @@ class Auth extends CI_Controller
             redirect('profil');
         }
     }
-
     private function _DaftarSession($data)
     {
         array_merge('login', ['log_status' => true]);
