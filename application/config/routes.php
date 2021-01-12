@@ -63,3 +63,7 @@ $route['user'] = 'user/index';
 $route['user/delete/(:num)'] = "user/delete/(:num)";
 
 $route['kategori/delete/(:num)'] = 'kategori/delete/(:num)';
+$route['berita'] = 'berita/index';
+$route['berita/add_berita'] = 'berita/index/add_berita';
+$route['berita/delete/(:num)'] = 'berita/delete/(:num)';
+$route['berita/edit_berita/(:num)'] = 'berita/index/edit_berita/(:num)';
