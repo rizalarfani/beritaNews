@@ -54,9 +54,11 @@ class Berita extends CI_Controller
             $penulis = $this->log_admin->nama_lengkap;
             $kategori = $this->input->post('kategori', true);
             $foto = $this->_uploadThumbnail();
+            $slug = str_replace(' ', '-', $judul);
             if (empty($foto)) {
                 $data = [
                     'judul_berita' => $judul,
+                    'slug'  => $slug,
                     'isi_berita' => $isi,
                     'penulis' => $penulis,
                     'thumbnail' => 'asdds.png',
@@ -65,6 +67,7 @@ class Berita extends CI_Controller
             } else {
                 $data = [
                     'judul_berita' => $judul,
+                    'slug'  => $slug,
                     'isi_berita' => $isi,
                     'penulis' => $penulis,
                     'thumbnail' => $foto,

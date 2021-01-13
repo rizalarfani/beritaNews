@@ -11,5 +11,4 @@ class Model_dashboard extends CI_Model
         return $this->db->get($table)->num_rows();
     }
 }
-
 /* End of file Model_dahsboard.php */

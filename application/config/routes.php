@@ -67,3 +67,6 @@ $route['berita'] = 'berita/index';
 $route['berita/add_berita'] = 'berita/index/add_berita';
 $route['berita/delete/(:num)'] = 'berita/delete/(:num)';
 $route['berita/edit_berita/(:num)'] = 'berita/index/edit_berita/(:num)';
+
+$route['home'] = 'home/index';
+$route['(:any)'] = "home/detail/(:any)";
