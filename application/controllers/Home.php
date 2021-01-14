@@ -20,6 +20,20 @@ class Home extends CI_Controller
             'page' => 'frontend/home',
             'list_berita' => $this->home->get_berita(),
             'berita_terbaru' => $this->home->get_berita_terbaru(),
+            'list_kategori'  => $this->home->kategori(),
+        ];
+        $this->template($params);
+    }
+    public function kategori()
+    {
+        $kategori = $this->uri->segment(2);
+        $name = $this->home->kategori(['slug' => $kategori]);
+        $params = [
+            'title' => 'Kategori' . $kategori,
+            'page'  => 'frontend/v_kategori',
+            'kategori'  => $this->home->get_berita_kategori(['tbl_berita.id_kategori' => $name->id]),
+            'list_kategori'  => $this->home->kategori(),
+            'berita_terbaru' => $this->home->get_berita_terbaru(),
         ];
         $this->template($params);
     }
@@ -33,12 +47,14 @@ class Home extends CI_Controller
                 'page' => 'frontend/v_detail',
                 'berita' => $get,
                 'berita_terbaru' => $this->home->get_berita_terbaru(),
+                'list_kategori'  => $this->home->kategori(),
             ];
             $this->template($params);
         } else {
             $params = [
                 'title' => 'Halaman Tidak Ditemukan',
-                'page' => 'frontend/404'
+                'page' => 'frontend/404',
+                'list_kategori'  => $this->home->kategori(),
             ];
             $this->template($params);
         }
